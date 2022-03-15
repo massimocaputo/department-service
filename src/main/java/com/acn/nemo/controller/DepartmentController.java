@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/department")
 @Slf4j
 public class DepartmentController {
 
     @Autowired
     private DepartmentService departmentService;
 
-    @PostMapping("/departments")
-    public Department saveDepartments(@RequestBody Department department){
+    @PostMapping("/saveDepartment")
+    public Department saveDepartment(@RequestBody Department department){
         log.info("Into saveDepartments method of DepartmentController");
         return departmentService.saveDepartments(department);
     }
