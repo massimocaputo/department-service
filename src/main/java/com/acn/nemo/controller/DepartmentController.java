@@ -29,7 +29,7 @@ public class DepartmentController {
         return departmentService.allDepartments();
     }
 
-    @GetMapping("/department/{id}")
+    @GetMapping("/retriveDepartment/{id}")
     public Department retriveDepartment(@PathVariable ("id") Long departmentId){
         log.info("Into retriveDepartment method of DepartmentController");
         return departmentService.retriveDepartment(departmentId);
